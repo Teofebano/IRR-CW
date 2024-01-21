@@ -26,9 +26,9 @@
 %                       the general field of study you are considering
 %                       for your review, and name of IRR tutor
 
-\newcommand{\examnumber}{1234567890}
-\newcommand{\field}{Usage of Financial Network Analysis in Stock Market during Covid-19 Pandemy}
-\newcommand{\supervisor}{My IRR Tutor}
+\newcommand{\examnumber}{B240710}
+\newcommand{\field}{Network Science Analysis : An Elixir to Prevent Global Financial Crisis?}
+\newcommand{\supervisor}{Xinran Ruan}
 
 \begin{document}
 \begin{minipage}[b]{110mm}
@@ -58,7 +58,7 @@
 %                       Insert your abstract HERE
 %                       
 \begin{abstract}
-        
+The emerging global financial system marked a new era where institutions, markets, and players are interconnected and depending on each other. Although it boosts global economic progress, it is exposed to systemic risk due to its properties. Network science is then proposed to manage such risk because its properties resemble real-world global financial systems. In this review, we explore the multiple usages of network science in global stock markets and draw context of usage, advantages, and disadvantages for each of the methods for future use cases.
 \end{abstract}
 
 \vspace*{1cm}
@@ -83,28 +83,33 @@ Date: \today
 %
 
 \section{Introduction}
+In the modern world, the global financial system is the intricate web of institutions, markets, and mechanisms that facilitates the flow of capital, currencies, and financial instruments on a worldwide scale \cite{FinancialSystem}. As the backbone of the modern global economy, this system connects individuals, businesses, governments, and financial entities across the world, forming a complex network of interactions among them. This network is instrumental for the aforementioned parties in allocating resources, managing risks, and supporting economic growth on international scale. Over the years, the network evolves following historical developments, technological advancements, and the dynamic nature of financial markets across the globe. Because of the interconnectedness properties of the network, it has emerged as a key driver of economic progress and a facilitator of cross-border collaborations.
 
-In the modern world, the global financial system is the intricate web of institutions, markets, and mechanisms that facilitates the flow of capital, currencies, and financial instruments on a worldwide scale \cite{FinancialSystem}. As the backbone of the modern global economy, the global financial system connects individuals, businesses, governments, and financial entities across the world, creating a complex network of interactions among them. This system is instrumental in allocating resources, managing risks, and supporting economic growth on an international scale. Over the years, it evolves following historical developments, technological advancements, and the dynamic nature of financial markets. This system has emerged as a key driver of economic progress and a facilitator of cross-border collaborations.
+However, despite the positive aspects that the global financial system offers to the world, it possesses an underlying risk that is able to collapse the international economy swiftly. The interdependencies properties of the network can transform a tiny disruption in one of the financial institutions inside the system into widespread or even total failure through cascading effect. This phenomenon is called systemic risk \cite{SystemicRisk}. The amplifying consequences of this risk is usually triggered by a shock or a series of interconnected events and often lead to global financial crisis.
 
-However, the global financial system possesses systemic risk due to its interconnectedness and interdependencies properties among financial institutions within. Systemic risk refers to the risk of widespread or even total failure of the system because of failure of one part of the system \cite{SystemicRisk}. The cascading effect usually is triggered by a shock or a series of interconnected events, exposing the global financial system to severe economic consequences.
+Covid-19 pandemic is one of the recent examples of systemic risk effects in the global financial system. The first case of Covid was identified in China in December 2019 \cite{WHOTimeline}, subsequently spreading to East Asia, Europe, and North America shortly after resulting in pessimism in the market. A significant turning point occurred on February 24, 2020, when the American stock market experienced a drastic decrease as indicated in both Dow Jones index and S\&P 500 index. The trend continued and hit the rock bottom on March 9 in which S\&P 500 index witnessed a 7\% dip and triggered a highly unusual stage 1 circuit breaker. It halted the stock market indefinitely to avoid the index plummeting even more. This created panic in the global markets, resulting in major indexes such as the FTSE 100, Frankfurt DAX 100, and Paris CAC 40 all decreasing subsequently, with the Sao Paulo B3 index receiving the hardest hit of -12.16\%  \cite{IndexDuringCovid}. This collective downturn resulted in a global financial crisis in only a matter of 3 months. Within that time span, the global gross domestic product (GDP) experienced a 3.4 percent decline, leading to a loss of economic output exceeding two trillion U.S. dollars \cite{GDPImpact}. Considering the massive economic loss of the crisis, identifying the systemic risk in the financial systems as soon as possible is crucial to mitigate or lessen the impact of the global financial crisis.
 
-Covid-19 pandemic is one of the recent examples of systemic risk effects in the global financial system. The first case of Covid was identified in China in December 2019 \cite{WHOTimeline}, subsequently spreading to East Asia, Europe, and North America shortly after resulting in pessimism in the market. Based on Statista Research Department, a significant turning point occurred on February 24, 2020, when the American stock market experienced a drastic decrease as indicated in both Dow Jones index and S\&P 500 index \cite{IndexDuringCovid}. The same study shows that the trend continued and hit the rock bottom on March 9, 2020, in which S\&P 500 index witnessed a 7\% dip and triggered a stage 1 circuit breaker, the second circuit breaker triggered in the history of the USA. This created panic in the global markets. Major indexes such as the FTSE 100, Frankfurt DAX 100, and Paris CAC 40 all decreased by more than 7\%, with the Sao Paulo B3 index plummeting by 12.16\%. This collective downturn resulted in a global financial crisis. For this reason, identifying the systemic risk in the financial systems as soon as possible is crucial to mitigate or lessen the impact of the global financial crisis.
+As previously mentioned, the global financial system takes the form of a network and the systemic risk of such a network can be analyzed by examining its robustness and interaction behaviors through network science. Network science has emerged as a powerful tool for identifying and understanding systemic risk within interconnected systems, as shown by Caccioli in his research \cite{Caccioli2018}. It provides a framework to model, analyze, and visualize the relationships among units within that shape. In the network science field of study there is a terminology called contagion and it offers insights into how disruptions in one part of the network can propagate, leading to systemic implications that extend far beyond individual components. This allows for the identification of critical nodes, vulnerable pathways, and potential cascading effects. Researchers from around the globe have utilized network attributes to do systemic risk analysis from multiple angles. In this review, we will only focus on academic work due to its unbiased and transparent nature without disregarding companies, banks, and countries' contributions towards the utilization of network science in financial systems.
 
-Network science has emerged as a powerful tool for identifying and understanding systemic risk within interconnected systems, as shown by Caccioli in his research \cite{Caccioli2018}. It provides a framework to model, analyze, and visualize the relationships among units within that shape the dynamics of the system. This approach offers insights into how disruptions in one part of the network can propagate, leading to systemic implications that extend far beyond individual components. These properties allow for the identification of critical nodes, vulnerable pathways, and potential cascading effects. Researchers from around the globe have utilized network attributes to do systemic risk analysis from multiple angles. In this review, we will only focus on academic works due to its unbiased and transparent nature without disregarding companies, banks, and countries' contributions towards the utilization of network science in financial systems.
+The aim of this review is to showcase current network science methodologies that can be used to evaluate systemic risks in the global financial system, enhancing resilience and contributing to the overall stability of the system. The review does not assume knowledge of network science, therefore in section 2 we will include essential theoretical aspects of network science in order to familiarize readers with fundamental knowledge of the topic and solutions that are proposed. Some financial theories that act as foundation for the network science approaches will be included in each of the corresponding sections of the approach to avoid confusion and misunderstanding. However, we will not cover any in-depth financial calculation in this review as we will focus more on the utilization of network science to mitigate the financial crisis.
 
-The aim of this review is to showcase current network science methodologies that can be used for managing systemic risks, enhancing resilience, and contributing to the overall stability of the system. In section 2, we will include essential theoretical aspects of network science in order to familiarize readers with fundamental knowledge of the topic. Furthermore, we will examine three attributes of the network science that mainly leveraged for that purpose
-
+Furthermore, we will examine three main approaches of the network science that mainly leveraged for that purpose
 \begin{enumerate}
-        \item In section 3, we will deep dive into measuring centrality attributes to identify important nodes within a network. These nodes often play pivotal roles in the transmission of risks
-        \item In section 4, we will examine the level of connectivity within a network that influences the speed and extent of risk transmission
-        \item In section 5, we will delve into community detection as it helps identify risk spread characteristics
+        \item In section 3, we will deep dive into the centrality measurement approach. This approach will identify important nodes within the network that play pivotal roles in the transmission of risks
+        \item In section 4, we will examine the network connectivity approach. This approach will pinpoint things that influence the speed and extent of risk transmission
+        \item In section 5, we will delve into the community detection approach. This approach will identify risk spread characteristics
 \end{enumerate}
+
 Conclusions and comments related to the topic will be presented in Section 6, while the final Section will highlight possible future research regarding the same topic.
+In this research review, we will only focus on the financial system of the stock market around the globe. Any other financial markets and instruments are not relevant in this review because each financial market will have its own attributes that contribute to different usage of network science.
+We base this review on peer-reviewed journals, articles, and also books to ensure the credibility of this review. We also limit the literature to be not older than 2011 as it is the initial usage of network science for systemic risk analysis in financial markets. Additionally, we also enrich the stated facts in this review using credible websites such as Investopedia and Statista.
 
-In this research review, we will only focus on the application of network science in the Stock Market around the globe. Any other financial markets and instruments are not relevant in this review.
-
-We base this review on peer-reviewed journals, articles, and also books to ensure the credibility of this review. We also limit the literature to be not older than 2011 as it is the initial usage of network science for systemic risk analysis in financial markets.
-
+\subsection{Research Questions}
+This research review will use literatures to answer these two main research questions
+\begin{enumerate}
+\item To what extent can network science be employed as a tool for analyzing and mitigating systemic risk in the global financial system?
+\item What methodologies does network science offer in the analysis of systemic risk in the global financial system?
+\end{enumerate}
 
 \section{Network Science}
 This section will contain
