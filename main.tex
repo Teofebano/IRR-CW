@@ -91,33 +91,66 @@ Covid-19 pandemic is one of the recent examples of systemic risk effects in the 
 
 As previously mentioned, the global financial system takes the form of a network and the systemic risk of such a network can be analyzed by examining its robustness and interaction behaviors through network science. Network science has emerged as a powerful tool for identifying and understanding systemic risk within interconnected systems, as shown by Caccioli in his research \cite{Caccioli2018}. It provides a framework to model, analyze, and visualize the relationships among units within that shape. In the network science field of study there is a terminology called contagion and it offers insights into how disruptions in one part of the network can propagate, leading to systemic implications that extend far beyond individual components. This allows for the identification of critical nodes, vulnerable pathways, and potential cascading effects. Researchers from around the globe have utilized network attributes to do systemic risk analysis from multiple angles. In this review, we will only focus on academic work due to its unbiased and transparent nature without disregarding companies, banks, and countries' contributions towards the utilization of network science in financial systems.
 
-The aim of this review is to showcase current network science methodologies that can be used to evaluate systemic risks in the global financial system, enhancing resilience and contributing to the overall stability of the system. The review does not assume knowledge of network science, therefore in section 2 we will include essential theoretical aspects of network science in order to familiarize readers with fundamental knowledge of the topic and solutions that are proposed. Some financial theories that act as foundation for the network science approaches will be included in each of the corresponding sections of the approach to avoid confusion and misunderstanding. However, we will not cover any in-depth financial calculation in this review as we will focus more on the utilization of network science to mitigate the financial crisis.
-
-Furthermore, we will examine three main approaches of the network science that mainly leveraged for that purpose
+The potential of network science to do comprehensive analysis of systemic risk in financial networks raises important questions. 
 \begin{enumerate}
-        \item In section 3, we will deep dive into the centrality measurement approach. This approach will identify important nodes within the network that play pivotal roles in the transmission of risks
-        \item In section 4, we will examine the network connectivity approach. This approach will pinpoint things that influence the speed and extent of risk transmission
-        \item In section 5, we will delve into the community detection approach. This approach will identify risk spread characteristics
+    \item To what extent can network science be employed as a tool for analyzing systemic risk in the global financial system and mitigate global crisis? 
+    \item And what methodologies does network science offer in order to do the analysis? 
+\end{enumerate}
+The aim of this review is to answer those questions and showcase current network science methodologies that can be used to evaluate systemic risks in the global financial system, enhancing resilience and contributing to the overall stability of the system. 
+
+The review does not assume knowledge of network science, therefore in section 2 we will include essential theoretical aspects of network science in order to familiarize readers with fundamental knowledge of the topic and solutions that are proposed. Some financial theories that act as foundation for the network science approaches will be included in each of the corresponding sections of the approach to avoid confusion and misunderstanding. However, we will not cover any in-depth financial calculation in this review as we will focus more on the utilization of network science to mitigate the financial crisis.
+
+Furthermore, we will examine three main approaches of network science that are mainly leveraged for that purpose in section 3.
+\begin{enumerate}
+        \item Centrality measurement approach. This approach will identify important nodes within the network that play pivotal roles in the transmission of risks
+        \item Connectivity approach. This approach will pinpoint things that influence the speed and extent of risk transmission
+        \item Community detection approach. This approach will identify risk spread characteristics
 \end{enumerate}
 
 Conclusions and comments related to the topic will be presented in Section 6, while the final Section will highlight possible future research regarding the same topic.
 In this research review, we will only focus on the financial system of the stock market around the globe. Any other financial markets and instruments are not relevant in this review because each financial market will have its own attributes that contribute to different usage of network science.
 We base this review on peer-reviewed journals, articles, and also books to ensure the credibility of this review. We also limit the literature to be not older than 2011 as it is the initial usage of network science for systemic risk analysis in financial markets. Additionally, we also enrich the stated facts in this review using credible websites such as Investopedia and Statista.
 
-\subsection{Research Questions}
-This research review will use literatures to answer these two main research questions
-\begin{enumerate}
-\item To what extent can network science be employed as a tool for analyzing and mitigating systemic risk in the global financial system?
-\item What methodologies does network science offer in the analysis of systemic risk in the global financial system?
-\end{enumerate}
-
 \section{Network Science}
 This section will contain
 \begin{enumerate}
     \item fundamental knowledge about network science
-    \item properties of network science that is useful for systemic risk analysis and the reasonings behind it
+    \item properties of network science that is useful for systemic risk analysis and the reasoning behind it
     \item example of the network in stock market, as there are multiple ways on representing the stock market into network form
 \end{enumerate}
+\subsection{Definition}
+Network science is a multidisciplinary field that explores the structure and dynamics of complex systems represented as networks. A network, in this context, consists of nodes connected by edges, and these connections can represent a diverse range of relationships, from social interactions to the flow of information and structure of the system. This interdisciplinary approach draws on principles from mathematics, computer science, physics, sociology, and other fields to unravel the intricate patterns that underlie various systems.
+
+One fundamental aspect of network science is the study of network topology, which refers to the arrangement and connectivity of nodes and edges within a network. By analyzing the topology, we gain insights into the emergent properties and behaviors of the system as a whole. This field has applications in diverse domains, including the financial system. Network science not only provides tools to describe the structure of these networks but also offers a framework to understand their evolution over time and the dynamic nature of interconnected systems.
+
+Furthermore, network science plays a pivotal role in understanding the resilience and vulnerabilities of complex systems. Through the examination of network properties such as centrality, connectivity, and modularity, we can identify critical nodes and links that, if disrupted, might lead to cascading failures or systemic risk. As the global financial system becomes increasingly interconnected, the study of network science becomes ever more crucial in addressing real-world challenges, such as mitigating future global financial crises.
+
+\subsection{Network Attribute : Centrality}
+Centrality in network science refers to the measure of importance or prominence of nodes within a network. It helps identify key elements that play crucial roles in the structure and functioning of a network. In a financial network, determining these important nodes are crucial as they play critical roles in maintaining the connectivity and functionality of the system. Disruption in the aforementioned nodes will most likely trigger cascading failure in the entire system, making them potential points of vulnerability of the system.
+
+Various centrality metrics exist, each capturing different aspects of a node's significance based on its position in the network. One common centrality metric is degree centrality, which assesses the number of direct connections a node has. Nodes with high degree centrality are often considered central, acting as hubs with many direct interactions. Another metric is betweenness centrality, which evaluates the extent to which a node lies on the shortest paths between other nodes. Nodes with high betweenness centrality act as bridges, facilitating efficient communication within the network. Eigenvector centrality assesses a node's influence by considering both its direct connections and the importance of those connections, making it a measure of a node's global impact.
+
+\subsection{Network Attribute : Connectivity}
+Connectivity in network science refers to the degree and pattern of connections between nodes in a network. It is fundamental to understand the structure, robustness, and functioning of complex systems. In the financial system, having comprehensive analysis on connectivity can help predicting and managing these cascading failures. It also provides a basis for quantifying the resilience of a network, as it measures how well a system can sustain and recover from disturbances. Analyzing connectivity provides insights into the resilience, efficiency, and vulnerabilities of the systems, contributing to improved decision-making and risk management. Connectivity analysis can also be expanded into early warning systems based on changes in network patterns. Monitoring connectivity allows for the identification of emerging risks and the implementation of preventive measures to mitigate systemic risk.
+
+Real-life networks, and in this case financial systems, are complex and diverse, and their connectivity is often difficult to analyze as its own. To overcome this issue, we can use various network models, such as random networks, Watts-Strogatz models, and Barabási-Albert models. These models help us simplify the real-world models and enable us to simulate any events and observe the impacts toward the system. 
+
+Each of these models has its own patterns and properties that vary widely, thus helping us pinpointing the characteristics of the financial system that we want to analyze.
+
+In general, connectivity of a network is determined by node, edge, path, and whether the network is directed and weighted or not. Direction and weight are two properties that belong to an edge, and represent direction and strength of that particular edge. By studying all of these components, we can have important information regarding resilience, efficiency, and vulnerabilities of the systems, contributing to improved decision-making and risk management.
+
+\subsection{Network Attribute : Community}
+Community is a group of nodes within a network that are more densely connected to each other than to the rest of the network. These groups represent subsets of nodes that exhibit a higher degree of similarity or interaction among themselves. By detecting the communities within a network, we can reveal the underlying structure and organization, providing insights into the modular and hierarchical nature of complex systems.
+
+In the financial network, this attribute is important for analyzing systemic risk because it helps identify and understand the organizational structure within the system. By uncovering communities or groups of densely connected financial institutions, community detection provides valuable insights into the interdependencies, vulnerabilities, and potential sources of systemic risk. Communities often represent subsystems or modules within a network that exhibit stronger internal connections. Recognizing these interconnected groups is essential for understanding how disruptions in one community may propagate within that community and potentially impact the entire network.
+
+Analyzing the interactions between communities also helps reveal dependencies and critical links between different parts of a system. Understanding how disruptions or failures in one community propagate to others is vital to lessen the impact of the crisis. As the financial network evolves over time, the community structures may change over time. Dynamic community detection methods allow for the analysis of how communities evolve and adapt to changes, providing insights into the temporal aspects of systemic risk.
+
+Various algorithms have been developed for community detection, each employing different approaches to identifying groups of nodes. Examples include the Louvain algorithm and Girvan-Newman algorithm. These algorithms use measures such as edge betweenness, node connectivity, and eigenvector centrality to detect communities.
+
+By applying community detection algorithms, we can gain a deeper understanding of the internal organization of complex systems, opening opportunities to identify critical components, assess vulnerabilities, and predict how disturbances might propagate through the interconnected communities. This knowledge is invaluable for managing and mitigating systemic risk.
+
+
 
 \section{Centrality Measurement Analysis}
 This section will contain answer to these questions
